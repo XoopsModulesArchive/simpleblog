@@ -1,0 +1,16 @@
+<!-- begin of simple blog block -->
+<{* $Id: simpleblog_list.html,v 1.1 2006/03/20 16:19:19 mikhail Exp $ *}>
+<table class="outer" cellspacing="1" width="95%">
+  <tr>
+    <th><{$_MD_SIMPLEBLOG_LIST_TITLE}></th><th><{$_MD_SIMPLEBLOG_LIST_CREATOR}></th><th><{$_MD_SIMPLEBLOG_LIST_UPDATE_DATE}></th>
+  </tr>
+<{foreach item=blog_user from=$simpleblog}>
+  <tr class="<{cycle values="even,odd"}>">
+    <td><a href='<{$blog_user.url}>'><{$blog_user.title}></a></td>
+    <td><a href='<{$blog_user.url}>'><{$blog_user.uname}></a></td>
+    <td><{$blog_user.last_update_l}></td>
+  </tr>
+<{/foreach}>
+<tr><td align="right" valign="bottom" colspan="3">SimpleBlog <{$SIMPLEBLOG_VERSION}> created by <a href="http://xoops-modules.sourceforge.jp/" target="_blank">xoops-modules</a> <a href="http://sourceforge.jp/projects/xoops-modules/" target="_blank">project</a>&nbsp; <a href="http://feeds.archive.org/validator/check?url=<{$simpleblog_rss_url}>" target="_blank"><img src="<{$xoops_url}>/modules/simpleblog/rss-valid-line.gif" border="0"></a> <a href="<{$simpleblog_rss_url}>"><img src="<{$xoops_url}>/modules/simpleblog/rss10.gif" border="0"></a></td></tr>
+</table>
+<!-- end of simple blog block --> 

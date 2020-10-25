@@ -1,0 +1,49 @@
+<!-- begin of simple blog main block -->
+<{* $Id: simpleblog_view.html,v 1.1 2006/03/20 16:19:19 mikhail Exp $ *}>
+<{foreach from=$simpleblog_index item=year key=key}><div align="right"><{$key}><{foreach from=$year item=month }> | <a href='<{$month.url}>'><{$month.month}></a><{/foreach}></div><{/foreach}>
+<table class="outer" cellspacing="1">
+<{if count($simpleblog_blogdata) gt 0 }>
+  <tr><th>
+  	<{$blog_title}>
+	<{if $simpleblog_editable eq true}>
+	<a href="<{$xoops_url}>/modules/simpleblog/edit.php?param=1">[<{$_MD_SIMPLEBLOG_LINK_EDIT}>]</a>
+	<{/if}>
+  </th></tr>
+<{foreach item=i from=$simpleblog_blogdata}>
+  <tr><td align="left" class="head"><a href="<{$i.url}>"><{$i.date_all}></a> : <{$i.title}>
+  <{if $simpleblog_editable eq true}>
+	<a href="<{$xoops_url}>/modules/simpleblog/edit.php?param=1-<{$i.year}><{$i.month}><{$i.date}>">[<{$_MD_SIMPLEBLOG_LINK_EDIT}>]</a>
+  <{/if}>
+  </td></tr>
+  <tr class="even"><td><div class="comText"><{$i.text|replace:"\n":'<br>'}></div></td></tr>
+  <tr class="odd">
+  <{if $simpleblog_commentable eq true}>
+  <form action="<{$xoops_url}>/modules/simpleblog/comment.php" method="post"><input type="hidden" name="targetUid" value="<{$simpleblog_targetUid}>">
+  <{/if}>
+    <td>
+  <{if count($i.comments) gt 0 }>
+      <{foreach item=j from=$i.comments}>
+        <div title="<{$j.create_date_m}>"><{$j.name}>: <{$j.comment}></div>
+      <{/foreach}>
+      <HR>
+  <{/if}>
+  <{if $simpleblog_commentable eq true}>
+      <input type="hidden" name="param" value="<{$simpleblog_targetUid}>-<{$i.year}><{$i.month}><{$i.date}>">
+      <{$_MD_SIMPLEBLOG_FORM_NAME}>:<{if $simpleblog_uname eq ""}><input type="text" name="name" value="" size="40">@<{$_MD_SIMPLEBLOG_FORM_GUEST}><br><{else}><{$simpleblog_uname}><{/if}> <{$_MD_SIMPLEBLOG_FORM_COMMENT}>:<input type="text" name="comment" size="50"><input type="submit" value="<{$_MD_SIMPLEBLOG_FORM_SEND}>"></form>
+  <{/if}>
+  <{if count($trackbacks) gt 0 }>
+  	<br><hr>
+	<{$_MD_SIMPLEBLOG_TRACKBACK}>
+  	<{foreach item=tb from=$trackbacks}><li><{$tb.count}>  <a href="<{$tb.url}>" target="_blank"><{if $tb.title }><{$tb.title}><{else}><{$tb.url}><{/if}></a><{/foreach}>
+  <{/if}>
+  <{if $i.trackback_url }>
+  <div align="right">[<a href="<{$i.trackback_url}>">TrackBack</a>]</div>
+  <{/if}>
+  </td></tr>
+<{/foreach}>
+<{else}>
+  <tr><td>no blog</td></tr>
+<{/if}>
+<tr><td align="right" valign="bottom">SimpleBlog <{$SIMPLEBLOG_VERSION}> created by <a href="http://xoops-modules.sourceforge.jp/" target="_blank">xoops-modules project</a> &nbsp; <a href="http://feeds.archive.org/validator/check?url=<{$simpleblog_user_rss}>" target="_blank"><img src="<{$xoops_url}>/modules/simpleblog/rss-valid-line.gif" border="0"></a> <a href="<{$simpleblog_user_rss}>"><img src="<{$xoops_url}>/modules/simpleblog/rss10.gif" border="0"></a></td></tr>
+</table>
+<!-- end of simple blog main block -->

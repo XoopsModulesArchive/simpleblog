@@ -1,0 +1,389 @@
+
+##############################################
+# admin.php
+##############################################
+
+[_AM_SIMPLEBLOG_ADMIN_EDIT]
+ja: 編集
+en: Edit
+
+[_AM_SIMPLEBLOG_APPLICATED_USER]
+ja: blog申請者
+en: blog applicant
+
+[_AM_SIMPLEBLOG_ADMIN_CREATE]
+ja: 新規作成
+en: Create New Blog User
+
+[_AM_SIMPLEBLOG_ADMIN_UID]
+ja: uid
+en: uid
+
+[_AM_SIMPLEBLOG_ADMIN_NAME]
+ja: 名前
+en: Name
+
+[_AM_SIMPLEBLOG_ADMIN_LASTUPDATE]
+ja: 最終更新日
+en: Last Update
+
+[_AM_SIMPLEBLOG_ADMIN_BLOG_TITLE]
+ja: BLOGタイトル
+en: BLOG Title
+
+[_AM_SIMPLEBLOG_ADMIN_PERMISSION]
+ja: パーミッション
+en: Permission
+
+[_AM_SIMPLEBLOG_ADMIN_OPERATION]
+ja: 操作
+en: OPERATION
+
+[_AM_SIMPLEBLOG_ADMIN_PERMISSION0]
+ja: ゲストコメント可・ユーザコメント可
+en: Guest can comment/User can comment
+
+[_AM_SIMPLEBLOG_ADMIN_PERMISSION1]
+ja: ゲストコメント不可・ユーザコメント可
+en: Guest cannot comment/User can comment
+
+[_AM_SIMPLEBLOG_ADMIN_PERMISSION2]
+ja: ゲストコメント不可・ユーザコメント不可
+en: Guest cannot comment/User cannot comment
+
+[_AM_SIMPLEBLOG_ADMIN_PERMISSION3]
+ja: ゲスト閲覧不可・ユーザコメント可
+en: Guest cannot read/User can comment
+
+[_AM_SIMPLEBLOG_ADMIN_NEW_VERSION]
+ja: 新しいバージョンがリリースされています！
+en: New version is released!
+
+[_AM_SIMPLEBLOG_ALLOW_APPLICATION]
+ja: 承認
+en: allowing 
+
+
+[_AM_SIMPLEBLOG_REJECT_APPLICATION]
+ja: 却下
+en: rejection
+
+[_AM_SIMPLEBLOG_USER_LIST]
+ja: ユーザ一覧
+en: User List
+
+##############################################
+# blocks.php
+##############################################
+
+[_MB_SIMPLEBLOG_YES]
+ja: はい
+en: Yes
+
+[_MB_SIMPLEBLOG_NO]
+ja: いいえ
+en: No
+
+[_MB_SIMPLEBLOG_SHOW_RSS_LINK]
+ja: RSSへのリンクを表示
+en: Show link to rss 
+
+[_MB_SIMPLEBLOG_BLOG_TITLE]
+ja: blog名
+en: Blog Name
+
+[_MB_SIMPLEBLOG_BLOGGER_NAME]
+ja: 作成者
+en: Blogger
+
+[_MB_SIMPLEBLOG_UPDATE_DATE]
+ja: 更新日
+en: Last Update
+
+[_MB_SIMPLEBLOG_NEW_APPLICATION]
+ja: 新規申請
+en: New Application
+
+##############################################
+# modinfo.php
+##############################################
+
+[_MI_SIMPLEBLOG_NAME]
+ja: シンプルBLOG
+en: SimpleBlog
+
+[_MI_SIMPLEBLOG_NAME_BIG_BLOCK]
+ja: シンプルBLOG
+en: SimpleBlog
+
+[_MI_SIMPLEBLOG_APPL_WAITING_TITLE]
+ja: シンプルBLOG承認待ち
+en: SimpleBlog New Application
+
+[_MI_SIMPLEBLOG_APPL_WAITING]
+ja: 承認待ち
+en: New Application
+
+[_MI_SIMPLEBLOG_DESC]
+ja: シンプルなBLOGです
+en: Simple Blog
+
+[_MI_SIMPLEBLOG_1_LINE]
+ja: 最近更新されたBlog
+en: Recently updated blog
+
+[_MI_SIMPLEBLOG_1_LINE_DESC]
+ja: 最新リストの1行表示ブロック
+en: 1 line view block
+
+[_MI_SIMPLEBLOG_WRITE]
+ja: BLOGを書く
+en: Write Blog
+
+[_MI_SIMPLEBLOG_CONFIG_RSS_DESC]
+ja: RSSで公開されるsimpleblogの説明です
+en: Description for this blog on rss feed
+
+[_MI_SIMPLEBLOG_CONFIG_RSS_DEF]
+ja: ユーザが自由に書けるシンプルなブログ
+en: Simple blog user can write
+
+[_MI_SIMPLEBLOG_CONF_DESC]
+ja: 説明
+en: Description
+
+[_MI_SIMPLEBLOG_APPL_OK]
+ja: ユーザ申請あり・なし
+en: Allow to application for user
+
+[_MI_SIMPLEBLOG_APPL_DESC]
+ja: ユーザからBLOGを書く申請を受付けるかどうか
+en: 
+
+[_MI_SIMPLEBLOG_APPL_ALLOW]
+ja: 申請可能
+en: permit
+
+[_MI_SIMPLEBLOG_APPL_DENY]
+ja: 申請不可能
+en: unpermit
+
+[_MI_SIMPLEBLOG_REWRITE_TITLE]
+ja: Apache rewrite engineを使用する
+en: Use Apache rewrite engine
+
+[_MI_SIMPLEBLOG_REWRITE_DESC]
+ja: Rewriteを使用すると /modules/simpleblog/view/index.php?uid=1 =&gt; /modules/simpleblog/view/1.html になります。(エキスパート用)
+en: User can use blog url from/modules/simpleblog/view/index.php?uid=1 to /modules/simpleblog/view/1.html (only expert)
+
+[_MI_SIMPLEBLOG_USE_REWRITE]
+ja: Rewrite使用
+en: Use rewrite
+
+[_MI_SIMPLEBLOG_UNUSE_REWRITE]
+ja: Rewrite不使用
+en: Unuse rewrite
+
+[_MI_SIMPLEBLOG_TRACKBACK]
+ja: トラックバック
+en: TrackBack
+
+[_MI_SIMPLEBLOG_TRACKBACK_DESC]
+ja: トラックバックを使用するか
+en: Enable TrackBack Feature
+
+[_MI_SIMPLEBLOG_USE_TRACKBACK]
+ja: トラックバック使用
+en: Use trackback
+
+[_MI_SIMPLEBLOG_UNUSE_TRACKBACK]
+ja: トラックバック不使用
+en: Unuse trackback
+
+[_MI_SIMPLEBLOG_UPDATE_PING]
+ja: 更新Pingを利用
+en: Use update ping
+
+[_MI_SIMPLEBLOG_UPDATE_PING_DESC]
+ja: 更新Pingを利用
+en: Use update ping
+
+[_MI_SIMPLEBLOG_USE_UPDATE_PING]
+ja: 更新Pingを使用
+en: Use update ping
+
+[_MI_SIMPLEBLOG_UNUSE_UPDATE_PING]
+ja: 更新Pingを不使用
+en: Unuse update ping
+
+##############################################
+# main.php
+##############################################
+
+[_MD_SIMPLEBLOG_NORIGHTTOACCESS]
+ja: このblogにアクセスする権限がありません.
+en: Permission Denied
+
+[_MD_SIMPLEBLOG_INTERNALERROR]
+ja: 内部エラーです。管理者にお問い合わせください。
+en: Inernal Error Occurred
+
+[_MD_SIMPLEBLOG_THANKS_COMMENT]
+ja: ツッコミありがとう！
+en: Thanks for your comment!
+
+[_MD_SIMPLEBLOG_BLOG_UPDATE]
+ja: Blogを更新しました！
+en: Blog Updated!
+
+[_MD_SIMPLEBLOG_COMMENT_NAME_TOO_LONG]
+ja: 名前が長すぎます！
+en: Name too long!
+
+[_MD_SIMPLEBLOG_COMMENT_NO_COMMENT]
+ja: コメントがありません！
+en: Please write your comment!
+
+[_MD_SIMPLEBLOG_INVALID_DATE]
+ja: 日付が不正です。
+en: Invalid date.
+
+[_MD_SIMPLEBLOG_LIST_TITLE]
+ja: blog名
+en: Blog Name
+
+[_MD_SIMPLEBLOG_LIST_CREATOR]
+ja: 作成者
+en: Blogger
+
+[_MD_SIMPLEBLOG_LIST_UPDATE_DATE]
+ja: 更新日
+en: Last Update
+
+[_MD_SIMPLEBLOG_TITLE_SUFFIX]
+ja: さんのblog
+en: ""
+
+[_MD_SIMPLEBLOG_TITLE_PREFIX]
+ja: ""
+en: Blog of 
+
+[_MD_SIMPLEBLOG_LINK_EDIT]
+ja: 編集
+en: Edit
+
+
+[_MD_SIMPLEBLOG_FORM_DATE]
+ja: 日付
+en: Date
+
+[_MD_SIMPLEBLOG_FORM_TITLE]
+ja: blogのタイトル
+en: Title of Blogs
+
+[_MD_SIMPLEBLOG_FORM_CONTENS]
+ja: ＢＬＯＧ
+en: B L O G
+
+
+[_MD_SIMPLEBLOG_FORM_NAME]
+ja: 名前
+en: name
+
+[_MD_SIMPLEBLOG_FORM_COMMENT]
+ja: ツッコミ
+en: comment
+
+[_MD_SIMPLEBLOG_FORM_SEND]
+ja: 送信
+en: Send
+
+[_MD_SIMPLEBLOG_FORM_PREVIEW]
+ja: プレビュー
+en: Preview
+
+[_MD_SIMPLEBLOG_FORM_GUEST]
+ja: ゲスト
+en: Guest
+
+[_MD_SIMPLEBLOG_FORM_ANONYMOUS_NAME]
+ja: ごんべえ
+en: anomymous
+
+[_MD_SIMPLEBLOG_APPLICATION_BLOG_NAME]
+ja: blog作成申請フォーム
+en: Form of creating blog 
+
+[_MD_SIMPLEBLOG_APPLICATION_BLOG_TITLE]
+ja: blogのタイトル
+en: Title of Blog
+
+[_MD_SIMPLEBLOG_APPLICATION_BLOG_PERMISSION_TITLE]
+ja:blogのパーミッション
+en: Permission
+
+[_MD_SIMPLEBLOG_APPLICATION_BLOG_PERMISSION_3]
+ja:ゲスト閲覧不可・ユーザコメント可
+en: Guest cannot read/User can comment
+
+[_MD_SIMPLEBLOG_APPLICATION_BLOG_PERMISSION_2]
+ja:ゲストコメント不可・ユーザコメント不可
+en:Guest cannot comment/User cannot comment
+
+[_MD_SIMPLEBLOG_APPLICATION_BLOG_PERMISSION_1]
+ja:ゲストコメント不可・ユーザコメント可
+en: Guest cannot comment/User can comment
+
+[_MD_SIMPLEBLOG_APPLICATION_BLOG_PERMISSION_0]
+ja: ゲストコメント可・ユーザコメント可
+en:Guest can comment/User can comment
+
+[_MD_SIMPLEBLOG_APPLICATION_HEAD]
+ja: blogを書く権限がありません。<br />blogを書きたい場合は、下のフォームから申請してください。
+en: You are not allowed to write blog.<br />If you want to write, please submit follow form.
+
+[_MD_SIMPLEBLOG_APPLICATION_SUBMIT]
+ja: 申請
+en: Submit
+
+[_MD_SIMPLEBLOG_APPLICATION_APPLIED]
+ja: 申請を受付けました。
+en: Receipted your application
+
+[_MD_SIMPLEBLOG_ERR_INVALID_PERMISSION]
+ja: 不正なパーミッションです
+en: Invalid permission
+
+[_MD_SIMPLEBLOG_ERR_APPLICATION_ALREADY_APPLIED]
+ja:申請はすでに受付けております
+en: Your application is already received.
+
+[_MD_SIMPLEBLOG_ERR_ALREADY_WRITABLE]
+ja: 既にBLOGが書ける様設定されています
+en: You can write now!
+
+
+
+[_MD_SIMPLEBLOG_TRACKBACK_URL]
+ja: 記事URL
+en: Your Blog URL
+
+[_MD_SIMPLEBLOG_TRACKBACK_BLOG_NAME]
+ja: 記事名【省略可】
+en: Your Blog Name
+
+[_MD_SIMPLEBLOG_TRACKBACK_TITLE]
+ja: TrackBackを送る
+en: Send trackback
+
+[_MD_SIMPLEBLOG_TRACKBACK]
+ja: リンク元
+en: Referer
+
+[_MD_SIMPLEBLOG_TRACKBACK_4MT]
+ja: MTユーザはこのURLを使用してください:
+en: TrackBack URL for this entry:
+
+[_MD_SIMPLEBLOG_CAN_WRITE_USER_ONLY]
+ja: ゲストユーザはBlogを書くことはできません。
+en: Guest cannot write blog!

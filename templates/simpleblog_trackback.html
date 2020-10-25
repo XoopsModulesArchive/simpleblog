@@ -1,0 +1,19 @@
+<!-- begin of simple blog trackback block -->
+<{* $Id: simpleblog_trackback.html,v 1.1 2006/03/20 16:19:19 mikhail Exp $ *}>
+<form method="post" action="<{$url}>">
+<table>
+	<tr class="head">
+		<td colspan="2">
+			<h2><{$_MD_SIMPLEBLOG_TRACKBACK_TITLE}></h2><br>
+			<{$_MD_SIMPLEBLOG_TRACKBACK_4MT}><br>
+			euc-jp: <{$mt_tb_url}>-eucjp  <br>
+			SJIS  : <{$mt_tb_url}>-sjis  <br>
+			UTF-8 : <{$mt_tb_url}>-utf8<br>
+		</td>
+	</tr>
+	<tr class="odd"><td><{$_MD_SIMPLEBLOG_TRACKBACK_URL}></td><td><input type="text" name="url" size="100"></td></tr>
+	<tr class="even"><td><{$_MD_SIMPLEBLOG_TRACKBACK_BLOG_NAME}></td><td><input type="text" name="title" size="100"></td></tr>
+	<tr class="foot"><td colspan="2"><center><input type="submit" name="submit" value="submit"></td></tr>
+</table>
+	
+<!-- end of simple blog trackback block -->

@@ -1,0 +1,15 @@
+<!-- begin of simple blog block -->
+<table class="outer" cellspacing="1" width="95%">
+<{foreach item=blog_user from=$block.simpleblog}>
+  <tr class="<{cycle values="even,odd"}>">
+    <td>
+      <div align="left"><a href='<{$blog_user.url}>'><{$blog_user.title|default:$blog_user.uname}></a></div>
+      <div align="right"><{$blog_user.last_update_m}></div>
+    </td>
+  </tr>
+<{/foreach}>
+<{if $block.show_rss eq 1}>
+<tr><td align="right" colspan="2"> <a href="http://feeds.archive.org/validator/check?url=<{$xoops_url}>/modules/simpleblog/rss.php" target="_blank"><img src="<{$xoops_url}>/modules/simpleblog/rss-valid-line.gif" border="0"></a> <a href="<{$xoops_url}>/modules/simpleblog/rss.php"><img src="<{$xoops_url}>/modules/simpleblog/rss.png" border="0"></a></td></tr>
+<{/if}>
+</table>
+<!-- end of simple blog block -->

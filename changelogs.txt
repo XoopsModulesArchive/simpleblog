@@ -1,0 +1,201 @@
+
+$Id: changelogs.txt,v 1.2 2006/03/29 03:08:54 mikhail Exp $
+ToDo:
+　　0.3で実装予定
+　　　　・コード整理。
+　　　　・XOOPSのイベント通知を利用する。
+　　
+　　以下、未決定
+　　　　・日記 -> ブログにする(笑
+　　　　　　簡単なんだけど、過去のデータ引継ぎがなぁ...
+　　　　・XOOPSのグループパーミションを利用する
+　　　　・カテゴリ実装
+　　　　・最新のコメントブロック
+　　　　・最新のトラックバックブロック
+
+ 
+
+■2004-06-10
+　　http://jp.xoops.org/modules/xhnewbb/viewtopic.php?topic_id=3557&forum=17#forumpost18941
+　　http://jp.xoops.org/modules/xhnewbb/viewtopic.php?topic_id=4125&forum=12&post_id=22150#forumpost22150
+　　http://jp.xoops.org/modules/xhnewbb/viewtopic.php?topic_id=2592&forum=17&post_id=13791#forumpost13791 
+　　　　のバグ修正
+
+ChangeLogs:
+■2004-03-12 0.2.1RC2リリース
+　　値が変更されるパターンのみでリファラチェックを行うようにした(admin/index.php)
+
+■2004-02-29 0.2.1RC1リリース
+　　XSS対応/SQL Injection対応/CSRF/include,requireなどのチェック
+
+
+■2003-12-11 0.2リリース
+2003-12-11
+　　0.2にした(conf.php)
+　　問題がなければ最後のRCにする予定。
+　　trackbackと更新pingのログを見やすく変更(trackback.php, class/SimpleBlogPing2.php)
+　　存在しないblogへのトラックバックをエラーにしようとしたら最新の日付にトラックバックとなってしまうのは仕様です。
+　　Preview実装(edit.php)
+
+2003-12-10
+　　xoops_convert_encodingを使わないようにした(thx ハルさん)
+　　トラックバックの受信は、euc-jp/sjis/utf-8のどれかで明示的にうけるように変更した。
+
+2003-12-06
+　　バージョン情報を追加(conf.php templates/simpleblog_list.html, templates/simpleblog_view.html, SimpleBlogUtils.php)
+
+2003-12-03
+　　テスト不十分だがREQUEST_URIが取得できない環境用のオプションを用意した。
+　　　　今後もあまりテストされなそうな感じですが....(conf.php,SimpleBlogUtils.php)
+　　次バージョン用カレンダークラスを用意中(0.2には突っ込みませんが....)
+　　myblog等への更新pingを撃つか撃たないか設定できるようにした(modinfo.php, laguage/lang.utf8, xoops_version.php, simpleblog.php)
+　　myblogにpingがうまくうてなくなってたので、weblogUpdatesにした(class/SimpleBlogPing2.php)
+　　デバッグ情報がログにでてたのを消した(conf.php, class/SimpleBlogPing2.php, SimpleBlogUtils.php)
+　　ユーザ毎のRSSにdc:languageとadmin:generatorAgent を追加(rss.php)
+　　ユーザ毎のRSSに含む本文を100文字から200文字に変更(rss.php)
+
+■2003-12-03 0.2-RC3リリース
+2003-12-02
+　　search.inc.phpの修正漏れをfix(thx shin0211さん)
+　　myblogとping.bloggers.jpへの更新pingがうまく動いてなかったので、とりあえずタイムアウトをなしにした
+
+■2003-11-30 0.2-RC2リリース
+2003-11-30
+　　「さんのblog」がきちんと表示されていなかったのを修正(simpleblog.php)
+　　TrackBack不使用時にはTrackbackを受付けないようにした。
+　　updatePing時にtimeoutを設けた(class/SimpleBlogPing2.php)
+
+2003-11-28
+　　編集画面のテーブルレイアウト修正(edit.php)
+　　ゲストの時のみツッコミの名前とコメントの間に改行をいれるようにした(templates/simpleblog_view.html)
+　　link rel="start" ヘッダをつけた(index.php)
+　　rssのdescriptionタグ内のhtmlは除去するようにした(rss.php SimpleBlogUtil.php)
+　　ゲストが「Blogを書く」メニューをクリックしたときのメッセージを変更(edit.php language/lang.utf8)
+
+2003-11-27
+　　rssへのリンクが間違っていたので修正(index.php, templates/simpleblog_list.html)
+　　今後、0.2リリースまでは新機能はつけないでバグフィックスのみにする
+
+2003-11-25
+　　いらないファイルを消した(messages.inc.php, header2.php)
+　　かなり変更
+　　　　・ページのURL等をかえた。
+　　　　・trackback_pingを受付けるようにした。
+　　　　・trackback_pingを送れるようにした。
+　　　　・backend.php と user_rss.php をrss.phpに統合
+　　　　・GSBlogとWordPressにTrackBackを送れることを確認(文字コード回りがあやしいとは思うけど)
+　　　　・http://ping.bloggers.jp/　http://bulkfeeds.net　http://ping.myblog.jp/　に更新Pingは撃てるようになった
+
+2003-11-21
+　　templateを少し修正(simpleblog_list.php, simpleblog_view.php)
+　　http://ping.bloggers.jp/ にもpingを送るように修正。でもちょっとおかしい。
+
+2003-11-20
+　　pingの実装方法を変えた(class/SimpleBlogPing2.php)
+　　簡易TrackBackフォーム実装(templates/simpleblog_trackback.php, templates/simpleblog_view.php)
+　　RSSの日付の地域部分のフォーマットが変だったのを修正
+
+2003-11-18
+　　公開blogのみ http://ping.myblog.jp/ にpingを送る(class/SimpleBlogPing.php)
+　　ブロックの日付表示に時間と分も表示させるようにした。
+　　
+2003-11-17
+　　ツッコミの日時を記録するようにした(mysql.sql, simpleblog.php, simpleblog_view.html)。
+　　公開blogのみ http://feeds.bulknews.net/ にpingを送る(simpleblog.php class/SimpleBlogPing.php)
+
+■2003-11-13 0.2-RC1リリース
+2003-11-13
+　　管理画面のユーザ一覧ページへのリンク場所を変更(admin/index.php)
+　　存在しないテンプレートが登録されていたので修正(xoops_version.php)
+　　
+2003-11-12
+　　アンインストール時にsimpleblog_trackbackを削除する部分がなかったので追加(xoops_version.php)
+　　トラックバックの集計方法を変更。
+　　トラックバックは日付が指定されてない場合は最新のblogに、指定されている場合は最新と指定されている日付につくようにした。
+　　管理画面にユーザ一覧画面を追加(thanks kit)
+　　ユーザ毎のRSSへのリンクをつけるようにした
+　　
+2003-11-11
+　　「Call-time pass-by-reference has been deprecated -...」というエラーがでるのを修正(view.php, view/index.php)
+　　rewrite対応するために内部大改造しました(管理画面の一般設定で設定してください)。現状バギーな感じがします。
+　　一応、トラックバック（ってほどのものではないですが）みれるようになりました。
+　　
+2003-11-10
+　　ユーザ毎にもRSSを出力するようにした(usr_rss/index.php)
+　　http://xoops-modules.sourceforge.jp/modules/simpleblog/user_rss.php?uid=6
+　　んなかんじ
+　　
+2003-11-04
+　　ユーザが存在しない場合などへのアクセスは白紙ページになっていたがメッセージを表示して拒否するようにした(simpleblog.php)
+ 　　apacheのmod_rewriteを使ってパラメータなしのurlでblogを表示できるようにしてる途中.....(sf.jpではrewriteが使えないので未確認部分多し)
+
+2003-10-28
+　　承認待ち表示用ブロックを作った
+　　管理画面用のアイコンを少し修正
+　　blogのリストにプロジェクトページへのリンクを作った(simpleblog_list.html)
+　　すごくてきとうに英語言語ファイルを作った
+　　
+2003-10-24
+　　検索部分がおかしかったのを修正(ユーザ情報表示部分)
+　　横一列の最近更新されたBlogブロックを作った
+　　言語ファイルの命名規則などをxoops仕様にあわせた
+　　検索結果の日付がおかしいのを直した(mysql.sql, search.inc.php, ReadMe.txt)
+　　ゲストコメント不可・ユーザコメント不可(つまりみるだけ)のパーミッションを作った
+　　　　(simpleblog_application.html, language/japanese/main.php, 
+　　　　language/japanese/admin.php, admin/index.php, simpleblog.php, messages.inc.php)
+　　
+■2003-10-23 0.1.2リリース
+2003-10-23
+　　blog申請の却下が未実装だったので実装した。実装したか忘れるのでToDoを書くことにした。
+　　blog申請を受付けるか受付けないか設定できるようにした(xoops_version.php, application.php, edit.php, modinfo.php)
+　　blog申請したときにblog名が登録されないバグを修正(applicaion.php, admin/index.php)
+　　言語ファイルの構成を見直した
+　　
+2003-10-18
+　　ネスケ系のブラウザでは横スクロールバーがでてしまう状態だったのを修正(simpleblog_view.html) thanks madder
+　　
+2003-10-14
+　　テンプレートを少し修正(simpleblog_view.html)
+　　RSSのタイトルがおかしかったのを修正(simpleblog_rss.html)
+　　タイトルとユーザ名のHTMLエスケープが抜けていたのを修正(admin/index.php)
+
+2003-09-30
+　　RSSの出力文字コードが化けることがあるのを修正(backend.php)
+　　
+2003-09-26
+　　1. simpleblog_list.htmlに直接日本語がはいってたのを修正
+　　2. templateファイルにcvsのIdタグがはいってなかったのを修正
+　　3. function.phpを使用しないように修正(simpleblog.phpにメソッドを移動)
+　　4. 3にともないあちこち修正
+　　5. ユーザが「ブログを作りたい！」って申請できるようにした。
+　　
+■2003-09-25 0.1.1公開
+2003-09-25
+　　・valid-rss画像を表示(simpleblog_block.html)
+　　・http://xoops-modules.sourceforge.jp/にリンクを追加(simpleblog_view.html)
+　　・ToDo.txtを削除した
+　　
+2003-09-24
+　　HTMLヘッダにRSS用のタグを出力するようにした(header.php)
+　　
+2003-09-23
+　　・RSS1.0に変更し、validatorで確認した(http://feeds.archive.org/validator/)
+　　・ブロック画面にRSSへのリンクをつけられるようにし、ブロック管理画面で表示・非表示を選択できるようにした。
+　　・アップデート通知機能はxoops-modules.sourceforge.jpのファイルを参照しに行っている。
+　　　http://xoops-modules.sourceforge.jp/ がメンテ中で通知機能がうっとおしいので、コメントアウトした。
+　　・blog毎に管理者のみ変更可能なタイトルをつけた
+　　
+2003-09-20
+　　RSSをはくようにした
+　　　　/modules/simpleblog/backend.php
+　　blog表示ページの年・月を右寄せに変更
+　　
+2003-09-19
+　　メニューの「BLOGを書く」が機能してなかったのを修正
+　　アップデート通知機能をつけてみた
+　　
+2003-09-18
+　　ソースを整理(重複部分をまとめたり、外部からの入力はyear,month,dateを全部分けるように統一したり...)
+　　
+■2003-09-17 0.1.0公開
+0.1 とりあえず、動くとこまで作成。

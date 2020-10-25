@@ -1,0 +1,30 @@
+<!-- begin of simple blog block -->
+
+<table class="outer" cellspacing="1" width="95%">
+  <tr class="outer">
+  	<th colspan="2"><{$_MD_SIMPLEBLOG_APPLICATION_BLOG_NAME}></th>
+  </td>
+  <tr class="even">
+    <td colspan="2">
+    	<{$_MD_SIMPLEBLOG_APPLICATION_HEAD}>
+    </td>
+  </tr>
+  <tr><form method="post" action="application.php">
+    <td><{$_MD_SIMPLEBLOG_APPLICATION_BLOG_TITLE}></td>
+    <td><input type="text" name="title" length="30"></td>
+  </tr>
+  <tr>
+    <td><{$_MD_SIMPLEBLOG_APPLICATION_BLOG_PERMISSION_TITLE}></td>
+    <td><select name="permission">
+      <option value="3"><{$_MD_SIMPLEBLOG_APPLICATION_BLOG_PERMISSION_3}></option>
+      <option value="2"><{$_MD_SIMPLEBLOG_APPLICATION_BLOG_PERMISSION_2}></option>
+      <option value="1"><{$_MD_SIMPLEBLOG_APPLICATION_BLOG_PERMISSION_1}></option>
+      <option value="0"><{$_MD_SIMPLEBLOG_APPLICATION_BLOG_PERMISSION_0}></option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center"><input type="submit" name="submit" value="<{$_MD_SIMPLEBLOG_APPLICATION_SUBMIT}>">
+  </tr></form>
+</table>
+<!-- end of simple blog block --> 
